@@ -1,0 +1,48 @@
+body {
+	margin: 1;
+	font-family: 'Roboto', sans-serif;
+	padding: 0;
+	background-image: url("images/back.png");
+	background-size: 100%;
+	color: white;
+	text-align: center;
+}
+
+.reg {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.header {
+	text-align: center;
+	border-bottom: 2px solid white;
+}
+fieldset {
+	margin-bottom: 10px;
+}
+.category {
+	margin-bottom: 20px;
+}
+.msg {
+	margin-bottom: 10px;
+}
+.agreement {
+	margin-bottom: 10px;
+}
+.attachment {
+	margin-bottom: 10px;
+}
+.submit {
+	text-align: center;
+}
+.msg {
+	vertical-align: top;
+}
+.submit {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid white;
+}
+textarea {
+	resize: none;
+}
