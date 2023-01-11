@@ -1,3 +1,19 @@
+//Поиск гидов
+async function searchingGuides(idRoute) {
+    let nUrl = new URL(url + "routes/" + idRoute + "/guides");
+    nUrl.searchParams.append("api_key", apiKey);
+
+    try {
+        let response = await fetch(nUrl);
+        let data = await response.json();
+        createGuidesTable(data, "Язык экскурсии", 0, 50);
+        createWorkExperience(data);
+        console.log(data);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
 //Нажатие на "Select" в таблице маршрутов
 function searchGuidesForRoute(event) {
     if (!event.target.classList.contains("btn-for-guides")) return;
@@ -63,4 +79,39 @@ function searchFieldInput() {
     let oldBtn = document.querySelector(".active");
     oldBtn.classList.remove("active");
     document.querySelector(".page-item").classList.add("active");
+}
+
+//Поиск при смене языка
+async function searchGuidesWithLanguageClick() {
+    let language = document.querySelector(".btn-language");
+    let minInput = document.querySelector("#work-min-experience");
+    let maxInput = document.querySelector("#work-max-experience");
+    let dataRouteId = document.querySelector(".search-btn-guides").getAttribute("data-route-id");
+    let nUrl = new URL(url + "routes/" + dataRouteId + "/guides");
+    nUrl.searchParams.append("api_key", apiKey);
+
+    try {
+        let response = await fetch(nUrl);
+        let data = await response.json();
+        createGuidesTable(data, language.textContent, minInput.value, maxInput.value);
+    } catch (error) {
+        showAlert("Не найдено", "alert-warning");
+    }
+}
+
+//Поиск гидов с фильтрами
+async function searchGuidesWithFilters(event) {
+    let language = document.querySelector(".btn-language");
+    let minInput = document.querySelector("#work-min-experience");
+    let maxInput = document.querySelector("#work-max-experience");
+    let nUrl = new URL(url + "routes/" + event.target.getAttribute("data-route-id") + "/guides");
+    nUrl.searchParams.append("api_key", apiKey);
+
+    try {
+        let response = await fetch(nUrl);
+        let data = await response.json();
+        createGuidesTable(data, language.textContent, minInput.value, maxInput.value);
+    } catch (error) {
+        showAlert("Не найдено", "alert-warning");
+    }
 }
