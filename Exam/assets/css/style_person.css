@@ -1,0 +1,45 @@
+header, footer {
+    background-color: blue;
+}
+
+.logo {
+    width: 135px;
+}
+
+.nav-link, footer {
+    color:lightyellow;
+}
+
+.name-company p {
+    color: lightyellow;
+}
+
+main {
+    background-color: gray;
+}
+
+.routes-list, .guides-list, .dignity {
+    border: gainsboro 2px solid;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bs-secondary);
+}
+
+.dropdown {
+    height: 100px;
+}
+
+.modal-content {
+    background-color:gray;
+}
+
+.alerts {
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+}

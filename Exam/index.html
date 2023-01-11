@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Travel</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="logo text-center mx-auto mx-md-5">
+                    <img class="img-fluid w-100" src="assets/images/img.jpg" alt="logo">
+                </div>
+                <div class="name-company d-flex flex-column ms-5">
+                    <p class="fs-1 mb-0">Global Travel</p>
+                    <p class="fs-5 mt-0">Экскурсии по Москве</p>
+                </div>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-5 ms-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Личный кабинет</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="alerts w-75 mx-auto">
+            <div class="d-none alert alert-warning alert-dismissible fade hidden" role="alert">
+                <!-- <strong>Holy guacamole!</strong> You should check in on some of those fields below. -->
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                    <div class="">
+                        <img class="img-fluid w-100" src="assets/images/Img2.jpg" alt="logo">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center fs-4">
+                    Global Travel – это лучший агрегатор, позволяющий быстро найти подходящую по всем параметрам экскурсию в Москве. С сервисом сотрудничают прогрессивные гиды, которые заряжают своей страстью к путешествиям и любовью к родному городу. Авторские программы позволяют не только узнать новую информацию и побывать в интересных местах, но и получить бесценный опыт. Оригинальные экскурсии направлены на получение ярких эмоций и незабываемых впечатлений.
+                </div>
+            </div>
+        </div>
+         
+             
+            <div class="container py-5">
+                <div class="row">
+                     <div class="col-lg-6 col-md-12 py-2">
+                        <img src="assets/images/img3.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6 col-md-12 py-2">
+                        
+                        <div class="fs-2 text-center">
+                            Наши плюсы  :
+                            <ol class="list-group list-group-numbered fs-4 text-start py-3">
+                                <li class="list-group-item">Доступные цены</li>
+                                <li class="list-group-item">Оплата в любой валюте</li>
+                                <li class="list-group-item">Экскурсии на разных языках</li>
+                            </ol>
+                            
+                        </div>
+                         <div class="fs-2 text-center">
+                            Наши минусы  :
+                            <ol class="list-group list-group-numbered fs-4 text-start py-3">
+                                <li class="list-group-item">Мы работаем только по Москве</li>
+                                <li class="list-group-item">Берем не более 10 человек на экскурсию</li>
+                                <li class="list-group-item">Работаем по полной предоплате</li>
+                            </ol>
+                             <p >Все лучшее нашим клиентам! </p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        
+        
+        <div class="container pt-5 routes-list">
+            <div class="routes">
+                <p class="fs-2">Список пешеходных маршрутов</p>
+            </div>
+            <div class="row gx-0">
+                <div class="col-10 col-md-5">
+                    <form role="search">
+                        <input class="form-control search-field" type="search" placeholder="Поиск" aria-label="Search">
+                    </form>
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-light search-btn">Найти</button>
+                </div>
+                <div class="dropdown col-12 col-md-5 overflow-auto">
+                    <button class="btn btn-light btn-main-object dropdown-toggle float-md-end mt-3 mt-md-0"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">Основной объект</button>
+                    <ul class="dropdown-menu main-objects-list">
+                        <li><a class="dropdown-item" href="#">Основной объект</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="py-3 row table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="">
+                        <tr>
+                            <th scope="col" data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="This top tooltip is themed via CSS variables.">Название</th>
+                            <th scope="col">Описание</th>
+                            <th scope="col">Основные объекты</th>
+                            <th scope="col">Выбрать</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-routes">
+                        <!-- <tr class="fs-6">
+                            <th scope="row" class="">Нескучный</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td class="">
+                                <button class="btn btn-light btn-for-guides" type="button" aria-expanded="false">
+                                    Да
+                                </button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container pb-3">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center d-flex flex-wrap">
+                    <li class="page-item"><a class="page-link active bg-secondary text-warning" href="#">1</a></li>
+                    <!-- <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </main>
+  
+    <footer>
+        <div class="py-3 me-auto d-flex justify-content-center align-items-center flex-column">
+            <hr class="border border-primary border-3 opacity-75">
+            <div class="container py-4">
+                <div class="fs-4">Контактная информация</div>
+               
+                <div class="fs-6">
+                    <div class="py-1"><i class="fa fa-envelope" aria-hidden="true"></i> Почта: globaltravel@yandex.ru</div>
+                    <div class="py-1"><i class="fa fa-phone-square" aria-hidden="true"></i> Телефон: +7 (872) 57-04-95
+                    </div>
+                    <div class="py-1"><i class="fa fa-github" aria-hidden="true"></i> Адрес: г. Москва, ул. Гоголя, 2</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/index/allRoutes.js"></script>
+    <script src="assets/js/index/click.js"></script>
+    <script src="assets/js/index/create.js"></script>
+    <script src="assets/js/index/search.js"></script>
+
+    <script src="assets/js/index/index.js"></script>
+</body>
+
+</html>
