@@ -45,11 +45,16 @@ function clickOnEye(event) {
     for (let swit of switches) {
         swit.innerHTML = "";
     }
+
+    let price = modal.querySelector("#price");
+    let priceRoute = event.target.parentNode.parentNode.children[3].textContent;
+    price.value = priceRoute;
+
     let option1 = document.createElement("input");
     option1.setAttribute("type", "text");
     option1.classList.add("form-control-plaintext");
     option1.setAttribute("readonly", "");
-    option1.value = "Скидка для школьников и студентов (15% скидка)";
+    option1.value = "Скидка для школьников и студентов (15% скидка = " + (parseInt((priceRoute * 100) / 85) - priceRoute) + ")";
     let routeOptionF = event.target.parentNode.parentNode.getAttribute("data-option1");
     if (routeOptionF == "true") options.append(option1);
 
@@ -57,13 +62,10 @@ function clickOnEye(event) {
     option2.setAttribute("type", "text");
     option2.classList.add("form-control-plaintext");
     option2.setAttribute("readonly", "");
-    option2.value = "Тематические сувениры для посетителей (+500 рублей за каждого посетителя)";
+    option2.value = "Тематические сувениры для посетителей (+500 рублей за каждого посетителя = " + (persons * 500) + ")";
     let routeOptionS = event.target.parentNode.parentNode.getAttribute("data-option2");
     if (routeOptionS == "true") options.append(option2);
-
-    let price = modal.querySelector("#price");
-    let priceRoute = event.target.parentNode.parentNode.children[3].textContent;
-    price.value = priceRoute;
+    
     modal.querySelector(".back-btn").classList.add("d-none");
     let createBtn = modal.querySelector(".create-btn");
     createBtn.setAttribute("data-bs-dismiss", "modal");
@@ -134,17 +136,15 @@ function clickOnPen(event) {
     let switchLabel1 = document.createElement("label");
     switchLabel1.classList.add("form-check-label");
     switchLabel1.setAttribute("for", "option1");
-    switchLabel1.textContent = "Использовать скидку для школьников и студентов";
+    switchLabel1.textContent = "Использовать скидку для школьников и студентов (Стоимость уменьшается на 15%)";
     let routeOptionF = event.target.parentNode.parentNode.getAttribute("data-option1");
     if (routeOptionF == "true") {
         switchInput1.checked = true;
-        switchInput1.setAttribute("readonly", "");
-        switchInput1.setAttribute("disabled", "");
     } else {
         switchInput1.checked = false;
-        switchInput1.removeAttribute("readonly");
-        switchInput1.removeAttribute("disabled");
     } 
+    switchInput1.removeAttribute("readonly");
+    switchInput1.removeAttribute("disabled");
     option1.append(switchInput1);
     option1.append(switchLabel1);
 
@@ -159,17 +159,15 @@ function clickOnPen(event) {
     let switchLabel2 = document.createElement("label");
     switchLabel2.classList.add("form-check-label");
     switchLabel2.setAttribute("for", "option2");
-    switchLabel2.textContent = "Тематические сувениры для посетителей";
+    switchLabel2.textContent = "Тематические сувениры для посетителей (Стоимость увеличивается на 500 рублей для каждого посетителя)";
     let routeOptionS = event.target.parentNode.parentNode.getAttribute("data-option2");
     if (routeOptionS == "true") {
         switchInput2.checked = true;
-        switchInput2.setAttribute("readonly", "");
-        switchInput2.setAttribute("disabled", "");
     } else {
         switchInput2.checked = false;
-        switchInput2.removeAttribute("readonly");
-        switchInput2.removeAttribute("disabled");
     } 
+    switchInput2.removeAttribute("readonly");
+    switchInput2.removeAttribute("disabled");
     option2.append(switchInput2);
     option2.append(switchLabel2);
 
